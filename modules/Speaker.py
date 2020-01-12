@@ -31,9 +31,11 @@ class Speaker():
     
     def ask(self,question):
         '''语音提问并等待输入'''
+        answer = input(question)
         self.speak(question)
-        input(question)
-
-                
-speaker1=Speaker()
-speaker1.ask('现在几点啊？')
+        return answer
+        
+    def read_file(self,filename):
+        with open (filename,encoding = 'utf-8') as f:
+            text = f.read()
+        self.speak(text)
