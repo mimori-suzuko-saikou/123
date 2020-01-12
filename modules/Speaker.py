@@ -31,8 +31,8 @@ class Speaker():
     
     def ask(self,question):
         '''语音提问并等待输入'''
-        answer = input(question)
         self.speak(question)
+        answer = input(question)
         return answer
         
     def read_file(self,filename):
